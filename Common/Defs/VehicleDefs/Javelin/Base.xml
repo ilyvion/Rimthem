@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <Vehicles.VehicleBuildDef Name="Rimthem_BaseJavelin_Blueprint" ParentName="VehicleBaseBuildable" Abstract="True">
+        <designationCategory>Rimthem_Category</designationCategory>
+
+        <graphicData>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+
+        <size>(2,2)</size>
+
+        <researchPrerequisites>
+            <li>Rimthem_Suits</li>
+        </researchPrerequisites>
+
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+
+        <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+    </Vehicles.VehicleBuildDef>
+
+    <Vehicles.VehicleDef Name="Rimthem_BaseJavelin" ParentName="BaseVehiclePawn" Abstract="True">
+        <graphicData>
+            <drawSize>(2,2)</drawSize>
+            <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+            <shaderType>Cutout</shaderType>
+        </graphicData>
+
+        <vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+        <vehicleCategory>Combat</vehicleCategory>
+        <techLevel>Ultra</techLevel>
+        <vehicleType>Land</vehicleType>
+
+        <size>(2,2)</size>
+        <fillPercent>1</fillPercent>
+
+        <properties>
+            <diagonalRotation>false</diagonalRotation>
+            <worldSpeedMultiplier>1</worldSpeedMultiplier>
+            <customTerrainCosts DisallowTerrainWithTag="Water" />
+            <roles>
+                <li>
+                    <key>pilot</key>
+                    <label>Pilot</label>
+                    <slots>1</slots>
+                    <slotsToOperate>1</slotsToOperate>
+
+                    <handlingTypes>
+                        <li>Movement</li>
+                    </handlingTypes>
+
+                    <hitbox>
+                        <side>Body</side>
+                    </hitbox>
+                </li>
+            </roles>
+        </properties>
+
+        <vehicleStats>
+        </vehicleStats>
+        <components>
+            <li>
+                <key>Engine</key>
+                <label>Engine</label>
+                <health>50</health>
+                <priorityStatEfficiency>true</priorityStatEfficiency>
+                <depth>External</depth>
+
+                <reactors>
+                    <li Class="Vehicles.Reactor_FuelLeak" />
+                    <li Class="Vehicles.Reactor_Explosive">
+                        <indicator>VF_Explosive</indicator>
+                        <chance>0.25</chance>
+                        <maxHealth>0.2</maxHealth>
+                        <radius>3</radius>
+                        <damageDef>Flame</damageDef>
+                    </li>
+                </reactors>
+
+                <hitbox>
+                    <side>Back</side>
+                </hitbox>
+
+                <categories>
+                    <li>MoveSpeed</li>
+                </categories>
+            </li>
+            <li>
+                <key>Chemtank</key>
+                <label>Chemtank</label>
+                <health>40</health>
+                <depth>Internal</depth>
+
+                <reactors>
+                    <li Class="Vehicles.Reactor_Explosive">
+                        <indicator>VF_Explosive</indicator>
+                        <chance>0.25</chance>
+                        <maxHealth>0.2</maxHealth>
+                        <radius>3</radius>
+                        <damageDef>Flame</damageDef>
+                    </li>
+                </reactors>
+
+                <hitbox>
+                    <side>Back</side>
+                </hitbox>
+            </li>
+        </components>
+
+        <comps>
+            <li Class="Vehicles.CompProperties_FueledTravel">
+                <fuelType>Chemfuel</fuelType>
+                <leakDef>Filth_Fuel</leakDef>
+                <fuelConsumptionRate>14.5</fuelConsumptionRate>
+                <fuelCapacity>80</fuelCapacity>
+            </li>
+        </comps>
+
+        <!-- <soundOneShotsOnEvent Inherit="False">
+            <li>
+                <key>PawnEntered</key>
+                <value>VVE_VehicleEnter</value>
+            </li>
+            <li>
+                <key>PawnExited</key>
+                <value>VVE_VehicleEnter</value>
+            </li>
+            <li>
+                <key>IgnitionOn</key>
+                <value>VVE_VehicleStart</value>
+            </li>
+            <li>
+                <key>IgnitionOff</key>
+                <value>VVE_VehicleStart</value>
+            </li>
+        </soundOneShotsOnEvent> -->
+
+        <!-- <comps>
+            <li Class="VanillaVehiclesExpanded.CompProperties_VehicleMovementController"></li>
+        </comps> -->
+    </Vehicles.VehicleDef>
+</Defs>

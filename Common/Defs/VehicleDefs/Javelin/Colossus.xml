@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <Vehicles.VehicleBuildDef ParentName="Rimthem_BaseJavelin_Blueprint">
+        <defName>Rimthem_Colossus_Blueprint</defName>
+        <label>Colossus Javelin</label>
+        <description>WIP</description>
+
+        <graphicData>
+            <texPath>Vehicles/Javelin/Colossus/Colossus_Male</texPath>
+        </graphicData>
+
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+            <WorkToBuild>7500</WorkToBuild>
+            <Flammability>0.05</Flammability>
+        </statBases>
+
+        <costList>
+            <Steel>220</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+
+        <thingToSpawn>Rimthem_Colossus</thingToSpawn>
+    </Vehicles.VehicleBuildDef>
+
+    <Vehicles.VehicleDef ParentName="Rimthem_BaseJavelin">
+        <defName>Rimthem_Colossus</defName>
+        <buildDef>Rimthem_Colossus_Blueprint</buildDef>
+
+        <label>Colossus Javelin</label>
+        <description>WIP</description>
+
+        <graphicData>
+            <texPath>Vehicles/Javelin/Colossus/Colossus_Male</texPath>
+        </graphicData>
+
+        <statBases>
+            <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.54</ArmorRating_Sharp>
+            <ArmorRating_Heat>1.0</ArmorRating_Heat>
+            <Flammability>0.5</Flammability>
+            <MarketValue>1615</MarketValue>
+        </statBases>
+
+        <vehicleStats>
+            <Mass>180</Mass>
+            <MoveSpeed>10.4</MoveSpeed>
+            <CargoCapacity>140</CargoCapacity>
+            <RepairRate>0.5</RepairRate>
+        </vehicleStats>
+
+
+    </Vehicles.VehicleDef>
+</Defs>

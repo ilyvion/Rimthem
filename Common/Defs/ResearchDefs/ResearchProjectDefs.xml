@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ResearchProjectDef>
+        <tab>Rimthem_ResearchTab</tab>
+        <defName>Rimthem_Suits</defName>
+        <label>Rimthem Suits</label>
+        <description>WIP</description>
+        <baseCost>15000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>CataphractArmor</li>
+            <li>ShieldBelt</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <researchViewX>0.0</researchViewX>
+        <researchViewY>0.0</researchViewY>
+        <techprintCount>4</techprintCount>
+        <techprintCommonality>3</techprintCommonality>
+        <techprintMarketValue>10000</techprintMarketValue>
+        <heldByFactionCategoryTags>
+            <li>Empire</li>
+        </heldByFactionCategoryTags>
+    </ResearchProjectDef>
+</Defs>

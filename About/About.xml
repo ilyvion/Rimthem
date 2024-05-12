@@ -14,5 +14,9 @@
             <downloadUrl>https://steamcommunity.com/workshop/filedetails/?id=3014915404</downloadUrl>
             <steamWorkshopUrl>steam://url/CommunityFilePage/3014915404</steamWorkshopUrl>
         </li>
+        <li>
+            <packageId>Ludeon.RimWorld.Royalty</packageId>
+            <displayName>Royalty</displayName>
+        </li>
     </modDependencies>
 </ModMetaData>
